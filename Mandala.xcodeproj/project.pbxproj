@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B2477A91247770E6000963AA /* MoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2477A90247770E6000963AA /* MoodListViewController.swift */; };
 		B2477A93247778D1000963AA /* MoodsConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2477A92247778D1000963AA /* MoodsConfigurable.swift */; };
+		B2477A9524777EEE000963AA /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2477A9424777EEE000963AA /* ImageSelector.swift */; };
 		B2E892E32471F775009D0E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E892E22471F775009D0E0A /* AppDelegate.swift */; };
 		B2E892E52471F775009D0E0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E892E42471F775009D0E0A /* SceneDelegate.swift */; };
 		B2E892E72471F775009D0E0A /* MoodSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E892E62471F775009D0E0A /* MoodSelectionViewController.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		B2477A90247770E6000963AA /* MoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodListViewController.swift; sourceTree = "<group>"; };
 		B2477A92247778D1000963AA /* MoodsConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsConfigurable.swift; sourceTree = "<group>"; };
+		B2477A9424777EEE000963AA /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
 		B2E892DF2471F775009D0E0A /* Mandala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mandala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E892E22471F775009D0E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E892E42471F775009D0E0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B2E892E22471F775009D0E0A /* AppDelegate.swift */,
 				B2E892E42471F775009D0E0A /* SceneDelegate.swift */,
 				B2E892E62471F775009D0E0A /* MoodSelectionViewController.swift */,
+				B2477A9424777EEE000963AA /* ImageSelector.swift */,
 				B2477A90247770E6000963AA /* MoodListViewController.swift */,
 				B2E892E82471F775009D0E0A /* Main.storyboard */,
 				B2477A92247778D1000963AA /* MoodsConfigurable.swift */,
@@ -285,6 +288,7 @@
 				B2E892E32471F775009D0E0A /* AppDelegate.swift in Sources */,
 				B2E89317247200FF009D0E0A /* UIColor+Mandala.swift in Sources */,
 				B2E89319247201E6009D0E0A /* UIImage+Mandala.swift in Sources */,
+				B2477A9524777EEE000963AA /* ImageSelector.swift in Sources */,
 				B2E892E52471F775009D0E0A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
