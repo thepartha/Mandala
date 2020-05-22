@@ -15,6 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIN-Bf-HFa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="wKg-iS-U7D" kind="embed" identifier="embedContainerViewController" id="1Eh-9A-Aoc"/>
+                                </connections>
+                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-EX-023">
                                 <rect key="frame" x="103.5" y="728" width="207" height="48"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,6 +30,9 @@
                                 <state key="normal" title="Add Mood">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0G-Fi-Yfb"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-sz-Htr">
                                 <rect key="frame" x="0.0" y="796" width="414" height="100"/>
@@ -52,7 +61,11 @@
                         <constraints>
                             <constraint firstItem="ibd-sz-Htr" firstAttribute="top" secondItem="Rgg-EX-023" secondAttribute="bottom" constant="20" id="2BU-QD-c14"/>
                             <constraint firstItem="Rgg-EX-023" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="2zi-9z-Y62"/>
+                            <constraint firstAttribute="trailing" secondItem="bIN-Bf-HFa" secondAttribute="trailing" id="4vH-e7-gk9"/>
+                            <constraint firstItem="bIN-Bf-HFa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6pE-EE-R3E"/>
                             <constraint firstItem="Rgg-EX-023" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6vV-HA-8Bn"/>
+                            <constraint firstAttribute="bottom" secondItem="bIN-Bf-HFa" secondAttribute="bottom" id="7qt-bI-aR6"/>
+                            <constraint firstItem="bIN-Bf-HFa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IVA-cq-PpT"/>
                             <constraint firstAttribute="trailing" secondItem="ibd-sz-Htr" secondAttribute="trailing" id="Yvz-Lh-slt"/>
                             <constraint firstItem="ibd-sz-Htr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lRU-6L-UPV"/>
                             <constraint firstAttribute="bottom" secondItem="ibd-sz-Htr" secondAttribute="bottom" id="nqh-Hj-bwM"/>
@@ -67,6 +80,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </scene>
+        <!--Mood List View Controller-->
+        <scene sceneID="MSv-2n-NZv">
+            <objects>
+                <tableViewController id="wKg-iS-U7D" customClass="MoodListViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yqk-w4-qxG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="gbU-7m-XCY">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gbU-7m-XCY" id="zfu-3t-yFp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wKg-iS-U7D" id="O34-7g-B1X"/>
+                            <outlet property="delegate" destination="wKg-iS-U7D" id="ec7-SJ-gEO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AHZ-yj-96k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="65"/>
         </scene>
     </scenes>
 </document>
